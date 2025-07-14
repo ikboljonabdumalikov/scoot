@@ -9,6 +9,46 @@
   <title>Frontend Mentor | Scoot About</title>
 </head>
 <body>
+  <header class="site-header">
+
+    <nav class="sitenav">
+      <div class="sitenav__container container">
+
+        <a class="sitenav__link link--logo" href="/">
+          <img class="sitenav__logo" src="./assets/logo.svg" alt="Scoot site logo" width="107" height="28">
+        </a>
+
+        <button class="sitenav__toggle" type="button" aria-label="Toggle navigation">
+          <img class="sitenav__toggle-icon sitenav__toggle-icon--hamburger" src="./assets/icons/hamburger.svg" alt="" width="24" height="16">
+          <img class="sitenav__toggle-icon sitenav__toggle-icon--close" src="./assets/icons/close.svg" alt="" width="19" height="19">
+        </button>
+
+        <div class="sitenav__content">
+          <ul class="sitenav__list">
+
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="./about.html">About</a>
+            </li>
+
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="./locations.html">Location</a>
+            </li>
+
+            <li class="sitenav__item">
+              <a class="sitenav__link" href="./careers.html">Careers</a>
+            </li>	
+
+          </ul>
+
+          <button type="button" class="sitenav__button sitenav__button--bordered">Get Scooting</button>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+
+  <div class="sitenav__backdrop"></div>
 
   About
   Location
@@ -100,6 +140,59 @@
   About
   Location
   Careers
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.sitenav__toggle');
+      const content = document.querySelector('.sitenav__content');
+      const backdrop = document.querySelector('.sitenav__backdrop');
+      const body = document.body;
+      
+      function openMenu() {
+        content.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        toggle.classList.add('is-open');
+        body.style.overflow = 'hidden';
+      }
+      
+      function closeMenu() {
+        content.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        body.style.overflow = '';
+      }
+      
+      toggle.addEventListener('click', function() {
+        const isOpen = content.classList.contains('is-open');
+        
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+      
+      // Close menu when clicking on backdrop
+      backdrop.addEventListener('click', function() {
+        closeMenu();
+      });
+      
+      // Close menu when clicking on a link
+      const navLinks = document.querySelectorAll('.sitenav__link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          closeMenu();
+        });
+      });
+      
+      // Close menu when pressing Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && content.classList.contains('is-open')) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
