@@ -1,50 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scoot</title>
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/styles.css">
-  <script src="./js/script.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoot</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- SITE-HEADER -->
+    <header class="site-header">
+      <div class="site-header__container container">
+        <nav class="sitenav">
+          <div class="site-header__top">
+            <a class="site-header__logo logo" href="#">
+              <img
+                class="logo__img"
+                src="assets/logo.svg"
+                alt="Scoot company logo"
+                width="108"
+                height="29"
+              />
+            </a>
+            <button
+              class="site-header__menu-toggler"
+              type="button"
+              aria-label="Open/close menu"
+            ></button>
+          </div>
 
-  <!-- SITE-HEADER -->
-  <header class="site-header">
-    <div class="site-header__container container">
-      <nav class="sitenav">
-        <div class="site-header__top">
-          <a class="site-header__logo logo" href="#">
-            <img class="logo__img" src="assets/logo.svg" alt="Scoot company logo" width="108" height="29">
-          </a>
-          <button class="site-header__menu-toggler" type="button" aria-label="Open/close menu"></button>
-        </div>
+          <div class="site-header__off-canvas">
+            <ul class="sitenav__list">
+              <li class="sitenav__item">
+                <a class="sitenav__link" href="#">About</a>
+              </li>
+              <li class="sitenav__item">
+                <a class="sitenav__link" href="#">Location</a>
+              </li>
+              <li class="sitenav__item">
+                <a class="sitenav__link" href="#">Careers</a>
+              </li>
+            </ul>
 
-        <div class="site-header__off-canvas">
-          <ul class="sitenav__list">
-            <li class="sitenav__item"><a class="sitenav__link" href="#">About</a></li>
-            <li class="sitenav__item"><a class="sitenav__link" href="#">Location</a></li>
-            <li class="sitenav__item"><a class="sitenav__link" href="#">Careers</a></li>
-          </ul>
-
-          <a class="site-header__button button" href="#">Get scootin</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-    <section class="hero">
-      <div class="container">
-        <h1>Scoot takes the hassle out of urban mobility</h1>
-        <p>Bike-sharing made simple. Pick up and drop off at any city centre location. Always affordable pricing, always reliable service.</p>
-        <a class="button" href="#">Get scootin</a>
+            <a class="site-header__button button" href="#">Get scootin</a>
+          </div>
+        </nav>
       </div>
-    </section>
-  </main>
+    </header>
 
-</body>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__info-wrapper">
+            <h1 class="hero__heading">Scooter sharing made simple</h1>
+
+            <p class="hero__desc">
+              Scoot takes the hassle out of urban mobility. Our bikes are placed
+              in convenient locations in each of our cities. Use our app to
+              locate the nearest bike, unlock it with a tap, and you’re away!
+            </p>
+
+            <a class="hero__button">Get Scooting</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="aspects">
+        <div class="container">
+          <ul class="aspects__list">
+            <li class="aspects__item">
+              <img class="aspects__item-icon" src="assets/icons/locate.svg" alt="Locate with app" width="96" height="96">
+              <h3 class="aspects__item-title">Locate with app</h3>
+              <p class="aspects__item-desc">
+                Use the app to find the nearest scooter to you. We are
+                continuously placing scooters in the areas with most demand, so
+                one should never be too far away.
+              </p>
+            </li>
+            <li class="aspects__item">
+              <img class="aspects__item-icon" src="assets/icons/scooter.svg" alt="Locate with app" width="96" height="96">
+              <h3 class="aspects__item-title">Pick your scooter</h3>
+              <p class="aspects__item-desc">
+                We show the most important info for the scooters closest to you.
+                So you know how much charge they have left and can see roughly
+                how much it will cost.
+              </p>
+            </li>
+            <li class="aspects__item">
+              <img class="aspects__item-icon" src="assets/icons/ride.svg" alt="Locate with app" width="96" height="96">
+              <h3 class="aspects__item-title">Enjoy the ride</h3>
+              <p class="aspects__item-desc">
+                Scan the QR code and the bike will unlock. Retract the cable
+                lock, put on a helmet, and you’re off! Always lock bikes away
+                from walkways and accessibility ramps.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <ul class="features__list">
+            <!-- Feature 1: Easy to use riding telemetry -->
+            <li class="features__item features__item--telemetry">
+              <div class="features__item-content">
+                <h2 class="features__item-title">Easy to use riding telemetry</h2>
+                <p class="features__item-desc">
+                  The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.
+                </p>
+                <a href="#" class="features__item-button button">Learn More</a>
+              </div>
+              <div class="features__item-image">
+                <img src="assets/images/telemetry.jpg" alt="Person using phone" width="445" height="445">
+              </div>
+            </li>
+
+            <!-- Feature 2: Coming to a city near you -->
+            <li class="features__item features__item--city">
+              <div class="features__item-content">
+                <h2 class="features__item-title">Coming to a city near you</h2>
+                <p class="features__item-desc">
+                  Scoot is available in 4 major cities so far. We're expanding rapidly, so be sure to let us know if you want to see us in your hometown. We're aiming to let our scooters loose on 23 cities over the coming year.
+                </p>
+                <a href="#" class="features__item-button button">Learn More</a>
+              </div>
+              <div class="features__item-image">
+                <img src="assets/images/near-you.jpg" alt="City street view" width="445" height="445">
+              </div>
+            </li>
+
+            <!-- Feature 3: Zero hassle payments -->
+            <li class="features__item features__item--payments">
+              <div class="features__item-content">
+                <h2 class="features__item-title">Zero hassle payments</h2>
+                <p class="features__item-desc">
+                  Our payment is as easy as one two three. We accept most credit cards and debit cards. You can also link your PayPal account inside the app. Need to pay later? No worries! You can defer payment for up to a month.
+                </p>
+                <a href="#" class="features__item-button button">Learn More</a>
+              </div>
+              <div class="features__item-image">
+                <img src="assets/images/payments.jpg" alt="Payment on phone" width="445" height="445">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="download">
+        <div class="download__container container">
+          <h2 class="download__title">Sign up and Scoot off today</h2>
+          <div class="download__links">
+            <a href="#" class="download__link">
+              <img src="assets/icons/app-store.svg" alt="Download on the App Store">
+            </a>
+            <a href="#" class="download__link">
+              <img src="assets/icons/google-play.svg" alt="Download on the Google Play Store">
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SITE-FOOTER -->
+    <footer class="site-footer">
+      <div class="site-footer__container container">
+          <a class="site-footer__logo logo" href="#">
+            <img
+              class="logo__img"
+              src="assets/footer-logo.svg"
+              alt="Scoot company logo"
+              width="108"
+              height="29"
+            />
+          </a>
+          <nav class="footernav">
+            <ul class="footernav__list">
+              <li class="footernav__item">
+                <a class="footernav__link" href="#">About</a>
+              </li>
+              <li class="footernav__item">
+                <a class="footernav__link" href="#">Location</a>
+              </li>
+              <li class="footernav__item">
+                <a class="footernav__link" href="#">Careers</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="site-footer__social">
+            <a href="#" class="site-footer__social-link">
+              <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24">
+            </a>
+            <a href="#" class="site-footer__social-link">
+              <img src="assets/icons/twitter.svg" alt="Twitter" width="24" height="24">
+            </a>
+            <a href="#" class="site-footer__social-link">
+              <img src="assets/icons/instagram.svg" alt="Instagram" width="24" height="24">
+            </a>
+          </div>
+      </div>
+    </footer>
+  </body>
 </html>
